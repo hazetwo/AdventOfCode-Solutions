@@ -27,8 +27,8 @@ pub fn is_invalid(id: &str) -> bool {
 }
 
 pub fn load() -> Result<Vec<String>, Box<dyn Error>> {
-    let contents =
-        fs::read_to_string("day2_input.txt").expect("Should have been able to read the file");
+    let contents = fs::read_to_string("inputs/day2_input.txt")
+        .expect("Should have been able to read the file");
     let res: Vec<String> = contents.split(',').map(|f| f.trim().to_string()).collect();
     Ok(res)
 }
